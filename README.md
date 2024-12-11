@@ -1,4 +1,4 @@
-# Klaro! GTM Consent Manager
+# gKlaro GTM Consent Manager
 
 [![Google Cloud Status](https://storage.googleapis.com/artlab-public.appspot.com/badges/badges-status.svg)](https://status.cloud.google.com/)
 [![Deploy to Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run/?git_repo=https://github.com/shyamAdw/gKlaro.git)

@@ -1,0 +1,12 @@
+runtime: python311
+entrypoint: gunicorn -b :$PORT main:app
+
+handlers:
+- url: /static
+  static_dir: static
+- url: /.*
+  script: auto
+
+env_variables:
+  # Replace with a strong, random key in production
+  SECRET_KEY: 'your_default_secret_key'

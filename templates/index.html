@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klaro! GTM Consent Manager</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <h1>Klaro! GTM Consent Manager</h1>
+
+    <section id="klaro-config">
+        <h2>Klaro! Configuration</h2>
+        <form id="klaro-form">
+            <div>
+                <label for="klaro-lang">Language:</label>
+                <select id="klaro-lang" name="lang">
+                    <option value="en">English</option>
+                    <option value="de">German</option>
+                    <option value="fr">French</option>
+                    </select>
+            </div>
+            <div>
+                <label for="klaro-storage-method">Storage Method:</label>
+                <select id="klaro-storage-method" name="storageMethod">
+                    <option value="cookie">Cookie</option>
+                    <option value="localStorage">localStorage</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="klaro-consent-title">Consent Title:</label>
+                <input type="text" id="klaro-consent-title" name="consentTitle" value="Privacy Settings">
+            </div>
+            <div>
+                <label for="klaro-consent-description">Consent Description:</label>
+                <textarea id="klaro-consent-description" name="consentDescription">We use cookies to enhance your experience...</textarea>
+            </div>
+
+            <h3>Consent Options</h3>
+            <div id="consent-options-container">
+                </div>
+            <button type="button" id="add-consent-option">Add Consent Option</button>
+
+            <button type="submit">Generate GTM Template</button>
+        </form>
+
+        <div id="gtm-template-output" style="display: none;">
+            <h2>Generated GTM Template</h2>
+            <pre id="gtm-template-code"></pre>
+            <h2>Generated GTM Trigger</h2>
+            <pre id="gtm-trigger-code"></pre>
+            <h2>Generated GTM Variable</h2>
+            <pre id="gtm-variable-code"></pre>
+        </div>
+
+        <div id="error-message" style="color: red;"></div>
+    </section>
+
+    <section id="gtm-debug">
+        <h2>GTM Debugging</h2>
+        <form id="debug-form">
+            <h3>Simulate Consent Choices</h3>
+            <div>
+                <input type="checkbox" id="debug-analytics" name="analytics" checked>
+                <label for="debug-analytics">Analytics</label>
+            </div>
+            <div>
+                <input type="checkbox" id="debug-marketing" name="marketing">
+                <label for="debug-marketing">Marketing</label>
+            </div>
+            <button type="submit">Simulate</button>
+        </form>
+    </section>
+
+    <section id="privacy-policy">
+        <h2>Privacy Policy</h2>
+        <form id="policy-form" action="/upload-policy" method="post" enctype="multipart/form-data">
+            <label for="policy-file">Upload Privacy Policy Template:</label>
+            <input type="file" id="policy-file" name="file">
+            <button type="submit">Upload</button>
+        </form>
+        <p>Or <a href="/download-template">download a sample template</a>.</p>
+    </section>
+
+    <section id="consent-analytics-section">
+        <h2>Consent Analytics</h2>
+        <div id="consent-analytics-data">
+            </div>
+    </section>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

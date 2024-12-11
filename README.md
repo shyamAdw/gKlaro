@@ -29,7 +29,7 @@ The Klaro! GTM Consent Manager is a web application designed to simplify the imp
 1.  **Clone the repository:**
 
     ```bash
-    git clone [https://github.com/shyamAdw/gKlaro.git](https://github.com/shyamAdw/gKlaro.git)
+    git clone https://github.com/shyamAdw/gKlaro.git
     cd gklaro
     ```
 
